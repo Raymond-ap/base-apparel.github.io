@@ -1,0 +1,137 @@
+/*
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+body {
+    background: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+}
+
+
+.content {
+    background: url('../images/bg-pattern-desktop.svg')center/cover no-repeat;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    min-height: 15rem;
+}
+
+.content .sub-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.content .img {
+    background: url('../images/hero-desktop.jpg')center/cover no-repeat;
+    height: 80vh;
+}
+
+.sub-content h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: var(--DesaturatedRed);
+    padding-bottom: 1rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.sub-content h1 span {
+    color: var(--DarkGrayishRed);
+}
+
+.sub-content p {
+    line-height: 1.5rem;
+    text-align: left;
+    color: var(--DesaturatedRed);
+}
+
+.form {
+    margin-top: 3rem;
+}
+
+.form input {
+    padding-right: 5rem;
+    padding-top: .9rem;
+    padding-bottom: 1rem;
+    padding-left: .3rem;
+    position: relative;
+    border-radius: 2rem;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--DesaturatedRed);
+    border: 1px solid var(--DesaturatedRed);
+}
+
+.form .btn {
+    position: absolute;
+}
+
+.form .btn button{
+    padding: .9rem 2rem;
+    border-radius: 2rem;
+    outline: none;
+    background: var(--SoftRed);
+    border: none;
+}
+
+.form .btn button:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 871px) {
+    body {
+        background: url('../images/bg-pattern-desktop.svg')center/cover no-repeat;
+    }
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .content .img {
+        width: 100%;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+    }
+}
